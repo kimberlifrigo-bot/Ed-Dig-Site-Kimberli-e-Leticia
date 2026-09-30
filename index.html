@@ -2,52 +2,276 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <!-- Meta tag viewport para garantir escala e responsividade correta em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscorp | Soluções Inteligentes e Futuro Sustentável</title>
+    <!-- Link para a folha de estilos externa -->
     <link rel="stylesheet" href="style.css">
-    <title>Oscorp</title>
 </head>
 <body>
-    <h1>Oscorp: Soluções inteligentes, Futuro Sustentável.</h1>
-    <h2>Oque Oscorp faz?</h2>
-     <p>Para se alinhar ao conceito de "Soluções inteligentes" e "Futuro Sustentável", a empresa atua em três pilares principais:</p>
-     <p>Biotecnologia e Saúde: Desenvolvimento de soluções médicas regenerativas, mapeamento genético para prevenção de doenças e 
-        aprimoramento de saúde humana através da ciência de ponta.</p>
-     <p>Energia Limpa e Renovável: Pesquisa e implementação de matrizes energéticas ecoeficientes, como sistemas avançados de energia solar, 
-        eólica e biocombustíveis de próxima geração. O foco está na criação de redes de distribuição inteligentes (smart grids) que reduzem o desperdício, 
-        otimizam o consumo industrial e diminuem drasticamente a pegada de carbono global.</p>
-     <p>Tecnologia Verde e Mobilidade Urbana: Desenvolvimento de novos materiais biodegradáveis para substituir plásticos, além de sistemas de transporte inteligentes
-         e eletrificados. Esse pilar une a inteligência artificial ao ecodesign para monitorar o impacto ambiental em tempo real, transformando cidades em 
-         ecossistemas urbanos autossustentáveis e integrados.</p>
-    <h3>Quem Somos</h3>
-     <p>Somos a Oscorp, uma empresa de ciência de ponta e tecnologia avançada dedicada a moldar o amanhã. Nascemos da urgência de responder aos maiores desafios
-         do nosso tempo: a evolução da saúde humana e a preservação do nosso planeta.</p>
-     <p>Guiados pelo manifesto de que a inovação só é real se for responsável, transformamos o conhecimento científico em Soluções Inteligentes 
-        para viabilizar um Futuro Sustentável.</p>
-     <p>Atuamos na intersecção da ciência e da engenharia, concentrando nossos esforços e investimentos em três ecossistemas vitais:</p>
-     <h3> Biotecnologia e Saúde</h3>
-     <p>Redefinimos os limites da medicina tradicional através do desenvolvimento de soluções médicas regenerativas e do mapeamento genético preventivo. 
-        Combinamos biologia molecular e inteligência artificial para antecipar diagnósticos, personalizar tratamentos e aprimorar a longevidade e a qualidade 
-        de vida humana.</p>
-    <p>A Oscorp desenvolve matrizes energéticas ecoeficientes de última geração, incluindo biocombustíveis avançados e 
-      tecnologias que superam a energia solar e eólica tradicional. A empresa projeta redes de distribuição inteligentes
-       (smart grids) gerenciadas por inteligência artificial para prever demandas, eliminar desperdícios industriais em
-        tempo real e liderar a transição para a redução da pegada de carbono global.</p>
-    <h3>Energia Limpa e Renovável</h3>
-    <p>Redefinimos a matriz energética global através do desenvolvimento de infraestruturas ecoeficientes de próxima
-       geração. Projetamos e implementamos sistemas avançados de energia solar e eólica, integrados a redes de distribuição
-        inteligentes (smart grids). Utilizando inteligência artificial, nossas soluções otimizam o consumo industrial em 
-        tempo real, eliminam o desperdício e aceleram a transição global para o carbono zero.</p>
-   <h3>Tecnologia Verde e Mobilidade Urbana</h3>
-   <p>Transformamos centros urbanos em ecossistemas autossustentáveis e conectados. Desenvolvemos novos materiais 
-      biodegradáveis de alta performance para erradicar o uso de plásticos convencionais na indústria. Na mobilidade,
-       lideramos a criação de sistemas de transporte inteligentes e eletrificados que, guiados por algoritmos de ecodesign,
-        monitoram e reduzem o impacto ambiental em tempo real.</p>
-        <h3>O Impacto Oscorp em Números</h3>
-        <p>Nossa tecnologia não vive apenas na teoria; ela transforma a realidade global todos os dias.
-• +45% | Eficiência Energética alcançada em indústrias parceiras através de nossas Smart Grids.
-• 98% | Redução do Uso de Plásticos convencionais nas empresas que adotaram nossos materiais biodegradáveis.
-• 10M+ | Vidas Impactadas positivamente por diagnósticos precoces via mapeamento genético preventivo.
-• 0% | Emissão de Carbono como meta atingida em nossos distritos urbanos piloto de mobilidade.
-</p>
+
+    <!-- 
+      ACESSIVIDADE (Skip Link): 
+      Link utilitário invisível visualmente que aparece ao focar com a tecla Tab.
+      Permite que usuários de leitores de tela e navegadores por teclado pulem o menu e vão direto ao conteúdo principal.
+    -->
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- 
+      HEADER (Cabeçalho da Página):
+      Contém a identidade visual da empresa (logotipo) e a navegação principal do site.
+    -->
+    <header class="site-header">
+        <div class="container header-container">
+            <!-- Logotipo da empresa. Usamos um link para a home e texto claro -->
+            <a href="index.html" class="logo" aria-label="Página inicial da Oscorp">
+                Oscorp<span class="logo-dot">.</span>
+            </a>
+
+            <!-- 
+              NAV (Navegação):
+              Informa aos leitores de tela que este bloco contém os links de navegação do site.
+              aria-label identifica qual é esta navegação caso existam outras no documento.
+            -->
+            <nav aria-label="Navegação Principal" class="main-nav">
+                <ul>
+                    <li><a href="#quem-somos">Quem Somos</a></li>
+                    <li><a href="#pilares">Nossos Pilares</a></li>
+                    <li><a href="#impacto">Impacto em Números</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 
+      MAIN (Conteúdo Principal):
+      Representa o conteúdo central e exclusivo desta página. Deve existir apenas uma tag <main> ativa por página.
+      id="conteudo-principal" é o alvo do "Skip Link".
+    -->
+    <main id="conteudo-principal" tabindex="-1">
+
+        <!-- 
+          SEÇÃO HERO (Apresentação Principal):
+          Primeira seção de destaque visual e institucional com a proposta de valor e CTA (Call to Action).
+        -->
+        <section class="hero-section" aria-labelledby="titulo-hero">
+            <div class="container hero-container">
+                <!-- h1: Título de nível 1. Único e mais importante da página -->
+                <h1 id="titulo-hero">Soluções Inteligentes, Futuro Sustentável.</h1>
+                <p class="hero-description">
+                    A Oscorp é uma empresa de ciência de ponta e tecnologia avançada dedicada a moldar o amanhã.
+                    Transformamos o conhecimento científico em inovação responsável para a saúde e para o planeta.
+                </p>
+                <div class="hero-buttons">
+                    <!-- Botões com papel interativo para simular ações de engajamento do usuário -->
+                    <a href="#pilares" class="btn btn-primary">Conheça Nossas Soluções</a>
+                    <a href="#contato" class="btn btn-secondary">Fale com Nossos Especialistas</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          SEÇÃO QUEM SOMOS:
+          Apresentação institucional da empresa.
+        -->
+        <section id="quem-somos" class="section" aria-labelledby="titulo-quem-somos">
+            <div class="container">
+                <!-- h2: Título de nível 2 para seções principais da página -->
+                <h2 id="titulo-quem-somos" class="section-title">Quem Somos</h2>
+                <div class="about-content">
+                    <p>
+                        Nascemos da urgência de responder aos maiores desafios do nosso tempo: a evolução da saúde humana e a preservação do nosso planeta.
+                        Guiados pelo manifesto de que a inovação só é real se for responsável, concentramos nossos esforços na intersecção da ciência e da engenharia.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          SEÇÃO PILARES / ATUAÇÃO:
+          Apresentação detalhada das três áreas de atuação usando cartões (<article>).
+        -->
+        <section id="pilares" class="section bg-light" aria-labelledby="titulo-pilares">
+            <div class="container">
+                <h2 id="titulo-pilares" class="section-title">Nossos Pilares de Atuação</h2>
+                <p class="section-subtitle">Conheça os três ecossistemas vitais onde transformamos a realidade global:</p>
+
+                <!-- Grid de cartões organizado estruturalmente -->
+                <div class="cards-grid">
+
+                    <!-- ARTICLE: Utilizado para conteúdos autônomos e reutilizáveis -->
+                    <article class="card">
+                        <header class="card-header">
+                            <!-- h3: Título de nível 3, hierarquicamente subordinado ao h2 da seção -->
+                            <h3>Biotecnologia e Saúde</h3>
+                        </header>
+                        <p>
+                            Redefinimos os limites da medicina tradicional através do desenvolvimento de soluções médicas regenerativas e do mapeamento genético preventivo. Combinamos biologia molecular e inteligência artificial para antecipar diagnósticos, personalizar tratamentos e aprimorar a longevidade e a qualidade de vida humana.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <header class="card-header">
+                            <h3>Energia Limpa e Renovável</h3>
+                        </header>
+                        <p>
+                            Redefinimos a matriz energética global através do desenvolvimento de infraestruturas ecoeficientes de próxima geração. Projetamos e implementamos sistemas avançados de energia solar e eólica, integrados a redes de distribuição inteligentes (smart grids) gerenciadas por IA para prever demandas, eliminar desperdícios industriais em tempo real e acelerar a transição global para o carbono zero.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <header class="card-header">
+                            <h3>Tecnologia Verde e Mobilidade</h3>
+                        </header>
+                        <p>
+                            Transformamos centros urbanos em ecossistemas autossustentáveis e conectados. Desenvolvemos novos materiais biodegradáveis de alta performance para erradicar o uso de plásticos convencionais na indústria. Na mobilidade, lideramos a criação de sistemas de transporte inteligentes e eletrificados que monitoram e reduzem o impacto ambiental em tempo real.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          SEÇÃO IMPACTO EM NÚMEROS:
+          Exibição de dados estatísticos usando lista semântica para acessibilidade.
+        -->
+        <section id="impacto" class="section" aria-labelledby="titulo-impacto">
+            <div class="container">
+                <h2 id="titulo-impacto" class="section-title">O Impacto Oscorp em Números</h2>
+                <p class="section-subtitle">Nossa tecnologia não vive apenas na teoria; ela transforma a realidade global todos os dias.</p>
+
+                <!-- 
+                  UL / LI: Usar listas semânticas em vez de divs genéricas é vital para acessibilidade.
+                  O leitor de tela anunciará "Lista com 4 itens", orientando o usuário cego.
+                -->
+                <ul class="stats-list">
+                    <li class="stat-item">
+                        <span class="stat-number">+45%</span>
+                        <span class="stat-label">Eficiência energética alcançada em indústrias parceiras através de nossas Smart Grids.</span>
+                    </li>
+                    <li class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Redução do uso de plásticos convencionais em empresas parceiras.</span>
+                    </li>
+                    <li class="stat-item">
+                        <span class="stat-number">10M+</span>
+                        <span class="stat-label">Vidas impactadas positivamente por diagnósticos precoces via mapeamento genético.</span>
+                    </li>
+                    <li class="stat-item">
+                        <span class="stat-number">0%</span>
+                        <span class="stat-label">Emissão de carbono como meta atingida em nossos distritos urbanos piloto.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 
+          SEÇÃO DE CONTATO E FORMULÁRIO ACESSÍVEL:
+          Formulário totalmente adaptado às diretrizes WCAG 2.1 AA.
+        -->
+        <section id="contato" class="section bg-light" aria-labelledby="titulo-contato">
+            <div class="container">
+                <h2 id="titulo-contato" class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Quer saber mais sobre nossas soluções ou formar uma parceria sustentável? Envie uma mensagem para nossa equipe de especialistas.</p>
+
+                <!-- 
+                  FORMULÁRIO ACESSÍVEL:
+                  - Atributo action e method para envio semântico de dados.
+                  - Semântica de campos de formulário e rótulos acessíveis.
+                -->
+                <form action="#" method="POST" class="contact-form" novalidate>
+                    
+                    <!-- Campo Nome -->
+                    <div class="form-group">
+                        <!-- 
+                          LABEL ACESSÍVEL:
+                          O atributo 'for' deve ter o exato mesmo valor do 'id' do input correspondente.
+                          Isso garante que ao clicar no texto do label, o campo receba o foco, e que o leitor de tela leia o texto do label ao focar no campo.
+                        -->
+                        <label for="nome" class="form-label">Nome Completo <span class="required-asterisk" aria-hidden="true">*</span></label>
+                        <input 
+                            type="text" 
+                            id="nome" 
+                            name="nome" 
+                            class="form-input" 
+                            required 
+                            aria-required="true"
+                            autocomplete="name"
+                            placeholder="Digite seu nome completo"
+                        >
+                    </div>
+
+                    <!-- Campo E-mail -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">E-mail Corporativo <span class="required-asterisk" aria-hidden="true">*</span></label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            required 
+                            aria-required="true"
+                            autocomplete="email"
+                            placeholder="seu.nome@empresa.com"
+                            aria-describedby="email-ajuda"
+                        >
+                        <!-- Texto de instrução associado via aria-describedby para leitura adicional em leitores de tela -->
+                        <span id="email-ajuda" class="form-help-text">Prometemos não enviar spam. Usaremos seu e-mail apenas para responder este contato.</span>
+                    </div>
+
+                    <!-- Campo Assunto/Interesse -->
+                    <div class="form-group">
+                        <label for="assunto" class="form-label">Área de Interesse <span class="required-asterisk" aria-hidden="true">*</span></label>
+                        <select id="assunto" name="assunto" class="form-input" required aria-required="true">
+                            <option value="" disabled selected>Selecione um pilar de interesse</option>
+                            <option value="biotecnologia">Biotecnologia e Saúde</option>
+                            <option value="energia">Energia Limpa e Renovável</option>
+                            <option value="tecnologia-verde">Tecnologia Verde e Mobilidade Urbana</option>
+                            <option value="outros">Outros Assuntos</option>
+                        </select>
+                    </div>
+
+                    <!-- Campo Mensagem -->
+                    <div class="form-group">
+                        <label for="mensagem" class="form-label">Mensagem <span class="required-asterisk" aria-hidden="true">*</span></label>
+                        <textarea 
+                            id="mensagem" 
+                            name="mensagem" 
+                            rows="5" 
+                            class="form-input" 
+                            required 
+                            aria-required="true"
+                            placeholder="Escreva sua mensagem aqui..."
+                        ></textarea>
+                    </div>
+
+                    <!-- Botão de Envio -->
+                    <button type="submit" class="btn btn-primary btn-submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 
+      FOOTER (Rodapé da Página):
+      Contém informações institucionais secundárias, direitos autorais e links complementares.
+    -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <p class="footer-logo">Oscorp Industries</p>
+                <p>Ciência de ponta e tecnologia avançada para moldar um futuro sustentável.</p>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; 2026 Oscorp. Todos os direitos reservados.</p>
+                <p>Desenvolvido com foco total em Acessibilidade Web (WCAG 2.1 AA).</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
