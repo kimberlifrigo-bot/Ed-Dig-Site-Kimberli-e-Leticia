@@ -2,36 +2,36 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <!-- Meta tag viewport para garantir escala e responsividade correta em dispositivos móveis -->
+    <!-- Meta tag viewport para garantir responsividade em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oscorp | Soluções Inteligentes e Futuro Sustentável</title>
-    <!-- Link para a folha de estilos externa -->
+    <!-- Vínculo com a folha de estilos externa -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- 
       ACESSIVIDADE (Skip Link): 
-      Link utilitário invisível visualmente que aparece ao focar com a tecla Tab.
-      Permite que usuários de leitores de tela e navegadores por teclado pulem o menu e vão direto ao conteúdo principal.
+      Link de atalho para utilizadores de teclado e leitores de tela. 
+      Permite pular diretamente para o conteúdo principal sem precisar passar por todos os links do menu.
     -->
     <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
     <!-- 
       HEADER (Cabeçalho da Página):
-      Contém a identidade visual da empresa (logotipo) e a navegação principal do site.
+      Região landmark que agrupa o elemento de identidade (logo) e o menu de navegação principal.
     -->
     <header class="site-header">
         <div class="container header-container">
-            <!-- Logotipo da empresa. Usamos um link para a home e texto claro -->
+            <!-- Logotipo da empresa utilizando um link com rótulo acessível explicativo -->
             <a href="index.html" class="logo" aria-label="Página inicial da Oscorp">
                 Oscorp<span class="logo-dot">.</span>
             </a>
 
             <!-- 
               NAV (Navegação):
-              Informa aos leitores de tela que este bloco contém os links de navegação do site.
-              aria-label identifica qual é esta navegação caso existam outras no documento.
+              Identifica a lista de links como o menu de navegação do site.
+              aria-label especifica qual é esta navegação no documento.
             -->
             <nav aria-label="Navegação Principal" class="main-nav">
                 <ul>
@@ -46,27 +46,27 @@
 
     <!-- 
       MAIN (Conteúdo Principal):
-      Representa o conteúdo central e exclusivo desta página. Deve existir apenas uma tag <main> ativa por página.
-      id="conteudo-principal" é o alvo do "Skip Link".
+      Região landmark que encapsula o conteúdo exclusivo desta página. Deve existir apenas um <main> ativo.
+      tabindex="-1" permite que o link de salto de conteúdo receba foco programático corretamente.
     -->
     <main id="conteudo-principal" tabindex="-1">
 
         <!-- 
-          SEÇÃO HERO (Apresentação Principal):
-          Primeira seção de destaque visual e institucional com a proposta de valor e CTA (Call to Action).
+          SEÇÃO HERO (Apresentação Destaque):
+          Proposta de valor principal da empresa e botões de chamada para ação (CTA).
         -->
         <section class="hero-section" aria-labelledby="titulo-hero">
             <div class="container hero-container">
-                <!-- h1: Título de nível 1. Único e mais importante da página -->
+                <!-- h1: Título de nível 1. Deve existir apenas um H1 principal por página -->
                 <h1 id="titulo-hero">Soluções Inteligentes, Futuro Sustentável.</h1>
                 <p class="hero-description">
-                    A Oscorp é uma empresa de ciência de ponta e tecnologia avançada dedicada a moldar o amanhã.
-                    Transformamos o conhecimento científico em inovação responsável para a saúde e para o planeta.
+                    Somos a Oscorp, uma empresa de ciência de ponta e tecnologia avançada dedicada a moldar o amanhã.
+                    Transformamos o conhecimento científico em inovação responsável para a saúde humana e para o planeta.
                 </p>
                 <div class="hero-buttons">
-                    <!-- Botões com papel interativo para simular ações de engajamento do usuário -->
+                    <!-- Simulador de links interativos em formato de botão acessível -->
                     <a href="#pilares" class="btn btn-primary">Conheça Nossas Soluções</a>
-                    <a href="#contato" class="btn btn-secondary">Fale com Nossos Especialistas</a>
+                    <a href="#contato" class="btn btn-secondary">Fale Conosco</a>
                 </div>
             </div>
         </section>
@@ -77,30 +77,31 @@
         -->
         <section id="quem-somos" class="section" aria-labelledby="titulo-quem-somos">
             <div class="container">
-                <!-- h2: Título de nível 2 para seções principais da página -->
+                <!-- h2: Título de nível 2 para seções principais do documento -->
                 <h2 id="titulo-quem-somos" class="section-title">Quem Somos</h2>
                 <div class="about-content">
                     <p>
                         Nascemos da urgência de responder aos maiores desafios do nosso tempo: a evolução da saúde humana e a preservação do nosso planeta.
-                        Guiados pelo manifesto de que a inovação só é real se for responsável, concentramos nossos esforços na intersecção da ciência e da engenharia.
+                    </p>
+                    <p>
+                        Guiados pelo manifesto de que a inovação só é real se for responsável, transformamos o conhecimento científico em Soluções Inteligentes para viabilizar um Futuro Sustentável. Atuamos na intersecção da ciência e da engenharia, concentrando nossos esforços e investimentos em três ecossistemas vitais.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- 
-          SEÇÃO PILARES / ATUAÇÃO:
-          Apresentação detalhada das três áreas de atuação usando cartões (<article>).
+          SEÇÃO PILARES DE ATUAÇÃO:
+          Apresentação dos pilares em artigos semânticos (<article>).
         -->
         <section id="pilares" class="section bg-light" aria-labelledby="titulo-pilares">
             <div class="container">
                 <h2 id="titulo-pilares" class="section-title">Nossos Pilares de Atuação</h2>
-                <p class="section-subtitle">Conheça os três ecossistemas vitais onde transformamos a realidade global:</p>
+                <p class="section-subtitle">Para se alinhar ao conceito de "Soluções inteligentes" e "Futuro Sustentável", atuamos em três pilares principais:</p>
 
-                <!-- Grid de cartões organizado estruturalmente -->
                 <div class="cards-grid">
 
-                    <!-- ARTICLE: Utilizado para conteúdos autônomos e reutilizáveis -->
+                    <!-- ARTICLE: Utilizado para conteúdos independentes e autoexplicativos -->
                     <article class="card">
                         <header class="card-header">
                             <!-- h3: Título de nível 3, hierarquicamente subordinado ao h2 da seção -->
@@ -116,16 +117,16 @@
                             <h3>Energia Limpa e Renovável</h3>
                         </header>
                         <p>
-                            Redefinimos a matriz energética global através do desenvolvimento de infraestruturas ecoeficientes de próxima geração. Projetamos e implementamos sistemas avançados de energia solar e eólica, integrados a redes de distribuição inteligentes (smart grids) gerenciadas por IA para prever demandas, eliminar desperdícios industriais em tempo real e acelerar a transição global para o carbono zero.
+                            Redefinimos a matriz energética global através do desenvolvimento de infraestruturas ecoeficientes de próxima geração. Projetamos e implementamos sistemas avançados de energia solar e eólica, integrados a redes de distribuição inteligentes (smart grids). Utilizando inteligência artificial, nossas soluções otimizam o consumo industrial em tempo real, eliminam desperdícios e aceleram a transição global para o carbono zero.
                         </p>
                     </article>
 
                     <article class="card">
                         <header class="card-header">
-                            <h3>Tecnologia Verde e Mobilidade</h3>
+                            <h3>Tecnologia Verde e Mobilidade Urbana</h3>
                         </header>
                         <p>
-                            Transformamos centros urbanos em ecossistemas autossustentáveis e conectados. Desenvolvemos novos materiais biodegradáveis de alta performance para erradicar o uso de plásticos convencionais na indústria. Na mobilidade, lideramos a criação de sistemas de transporte inteligentes e eletrificados que monitoram e reduzem o impacto ambiental em tempo real.
+                            Transformamos centros urbanos em ecossistemas autossustentáveis e conectados. Desenvolvemos novos materiais biodegradáveis de alta performance para erradicar o uso de plásticos convencionais na indústria. Na mobilidade, lideramos a criação de sistemas de transporte inteligentes e eletrificados que, guiados por algoritmos de ecodesign, monitoram e reduzem o impacto ambiental em tempo real.
                         </p>
                     </article>
 
@@ -135,7 +136,7 @@
 
         <!-- 
           SEÇÃO IMPACTO EM NÚMEROS:
-          Exibição de dados estatísticos usando lista semântica para acessibilidade.
+          Uso de lista semântica (<ul>/<li>) para apresentação dos dados estatísticos.
         -->
         <section id="impacto" class="section" aria-labelledby="titulo-impacto">
             <div class="container">
@@ -143,52 +144,46 @@
                 <p class="section-subtitle">Nossa tecnologia não vive apenas na teoria; ela transforma a realidade global todos os dias.</p>
 
                 <!-- 
-                  UL / LI: Usar listas semânticas em vez de divs genéricas é vital para acessibilidade.
-                  O leitor de tela anunciará "Lista com 4 itens", orientando o usuário cego.
+                  Estrutura de Lista Semântica: 
+                  Permite que o leitor de tela anuncie previamente a quantidade de itens presentes na lista.
                 -->
                 <ul class="stats-list">
                     <li class="stat-item">
                         <span class="stat-number">+45%</span>
-                        <span class="stat-label">Eficiência energética alcançada em indústrias parceiras através de nossas Smart Grids.</span>
+                        <span class="stat-label">Eficiência Energética alcançada em indústrias parceiras através de nossas Smart Grids.</span>
                     </li>
                     <li class="stat-item">
                         <span class="stat-number">98%</span>
-                        <span class="stat-label">Redução do uso de plásticos convencionais em empresas parceiras.</span>
+                        <span class="stat-label">Redução do Uso de Plásticos convencionais nas empresas que adotaram nossos materiais biodegradáveis.</span>
                     </li>
                     <li class="stat-item">
                         <span class="stat-number">10M+</span>
-                        <span class="stat-label">Vidas impactadas positivamente por diagnósticos precoces via mapeamento genético.</span>
+                        <span class="stat-label">Vidas Impactadas positivamente por diagnósticos precoces via mapeamento genético preventivo.</span>
                     </li>
                     <li class="stat-item">
                         <span class="stat-number">0%</span>
-                        <span class="stat-label">Emissão de carbono como meta atingida em nossos distritos urbanos piloto.</span>
+                        <span class="stat-label">Emissão de Carbono como meta atingida em nossos distritos urbanos piloto de mobilidade.</span>
                     </li>
                 </ul>
             </div>
         </section>
 
         <!-- 
-          SEÇÃO DE CONTATO E FORMULÁRIO ACESSÍVEL:
-          Formulário totalmente adaptado às diretrizes WCAG 2.1 AA.
+          SEÇÃO DE CONTATO:
+          Formulário totalmente acessível estruturado com <form>, <label>, <input>, <select> e <textarea>.
         -->
         <section id="contato" class="section bg-light" aria-labelledby="titulo-contato">
             <div class="container">
                 <h2 id="titulo-contato" class="section-title">Entre em Contato</h2>
-                <p class="section-subtitle">Quer saber mais sobre nossas soluções ou formar uma parceria sustentável? Envie uma mensagem para nossa equipe de especialistas.</p>
+                <p class="section-subtitle">Fale com nossos especialistas e descubra como integrar nossas soluções inteligentes ao seu negócio.</p>
 
-                <!-- 
-                  FORMULÁRIO ACESSÍVEL:
-                  - Atributo action e method para envio semântico de dados.
-                  - Semântica de campos de formulário e rótulos acessíveis.
-                -->
                 <form action="#" method="POST" class="contact-form" novalidate>
                     
-                    <!-- Campo Nome -->
+                    <!-- Campo: Nome Completo -->
                     <div class="form-group">
                         <!-- 
-                          LABEL ACESSÍVEL:
-                          O atributo 'for' deve ter o exato mesmo valor do 'id' do input correspondente.
-                          Isso garante que ao clicar no texto do label, o campo receba o foco, e que o leitor de tela leia o texto do label ao focar no campo.
+                          O atributo 'for' do label deve ser idêntico ao 'id' do input.
+                          Isso permite ao leitor de tela anunciar o nome do campo ao focar nele e amplia a área de clique.
                         -->
                         <label for="nome" class="form-label">Nome Completo <span class="required-asterisk" aria-hidden="true">*</span></label>
                         <input 
@@ -203,7 +198,7 @@
                         >
                     </div>
 
-                    <!-- Campo E-mail -->
+                    <!-- Campo: E-mail Corporativo -->
                     <div class="form-group">
                         <label for="email" class="form-label">E-mail Corporativo <span class="required-asterisk" aria-hidden="true">*</span></label>
                         <input 
@@ -217,15 +212,15 @@
                             placeholder="seu.nome@empresa.com"
                             aria-describedby="email-ajuda"
                         >
-                        <!-- Texto de instrução associado via aria-describedby para leitura adicional em leitores de tela -->
-                        <span id="email-ajuda" class="form-help-text">Prometemos não enviar spam. Usaremos seu e-mail apenas para responder este contato.</span>
+                        <!-- Texto de suporte associado via aria-describedby para ser lido automaticamente pelo leitor de tela -->
+                        <span id="email-ajuda" class="form-help-text">Utilizaremos seu e-mail apenas para responder a esta solicitação.</span>
                     </div>
 
-                    <!-- Campo Assunto/Interesse -->
+                    <!-- Campo: Área de Interesse -->
                     <div class="form-group">
                         <label for="assunto" class="form-label">Área de Interesse <span class="required-asterisk" aria-hidden="true">*</span></label>
                         <select id="assunto" name="assunto" class="form-input" required aria-required="true">
-                            <option value="" disabled selected>Selecione um pilar de interesse</option>
+                            <option value="" disabled selected>Selecione uma opção</option>
                             <option value="biotecnologia">Biotecnologia e Saúde</option>
                             <option value="energia">Energia Limpa e Renovável</option>
                             <option value="tecnologia-verde">Tecnologia Verde e Mobilidade Urbana</option>
@@ -233,7 +228,7 @@
                         </select>
                     </div>
 
-                    <!-- Campo Mensagem -->
+                    <!-- Campo: Mensagem -->
                     <div class="form-group">
                         <label for="mensagem" class="form-label">Mensagem <span class="required-asterisk" aria-hidden="true">*</span></label>
                         <textarea 
@@ -243,11 +238,11 @@
                             class="form-input" 
                             required 
                             aria-required="true"
-                            placeholder="Escreva sua mensagem aqui..."
+                            placeholder="Escreva sua mensagem em detalhes..."
                         ></textarea>
                     </div>
 
-                    <!-- Botão de Envio -->
+                    <!-- Botão de Envio de Formulário -->
                     <button type="submit" class="btn btn-primary btn-submit">Enviar Mensagem</button>
                 </form>
             </div>
@@ -257,7 +252,7 @@
 
     <!-- 
       FOOTER (Rodapé da Página):
-      Contém informações institucionais secundárias, direitos autorais e links complementares.
+      Região landmark final contendo direitos autorais e dados institucionais secundários.
     -->
     <footer class="site-footer">
         <div class="container footer-container">
@@ -268,7 +263,7 @@
             
             <div class="footer-copyright">
                 <p>&copy; 2026 Oscorp. Todos os direitos reservados.</p>
-                <p>Desenvolvido com foco total em Acessibilidade Web (WCAG 2.1 AA).</p>
+                <p>Desenvolvido de acordo com as Diretrizes de Acessibilidade Web (WCAG 2.1 AA).</p>
             </div>
         </div>
     </footer>
